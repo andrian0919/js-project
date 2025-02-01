@@ -8,14 +8,13 @@ function renderTodos() {
     todoList.innerHTML = '';
     todos.forEach((todo, index) =>{
         const li = document.createElement('li');
-        li.className = 'todo-item'
-        li.innertHTML = `
+        li.className = 'todo-item';
+        li.innerHTML = `
             <span> ${todo}</span>
-            <button onlick="editTodo(${index})">Edit</button>
+            <button onclick="editTodo(${index})">Edit</button>
             <button onclick="deleteTodo(${index})">Delete</button>
         `;
         todoList.appendChild(li);
-
     })
 }
 
@@ -35,7 +34,6 @@ function editTodo(index) {
         todos[index] = updatedTodo.trim();
         renderTodos();
     }
-
 }
 
 function deleteTodo(index) {
@@ -43,10 +41,8 @@ function deleteTodo(index) {
         todos.splice(index, 1);
         renderTodos();
     }
-
 }
 
 todoForm.addEventListener('submit', addTodo);
 
 renderTodos();
-

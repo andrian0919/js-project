@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-self: center;
+    justify-content: center;
     align-items: center;
     height: 100vh;
 }
@@ -19,6 +19,11 @@ body {
 
 h1 {
     text-align: center;
+    margin-bottom: 20px;
+}
+
+#todo-from {
+    display: flex;
     margin-bottom: 20px;
 }
 
@@ -57,10 +62,6 @@ button:hover {
 }
 
 .todo-item:last-child {
-    border-bottom: none;
-}
-
-.todo-item span {
     border-bottom: none;
 }
 
